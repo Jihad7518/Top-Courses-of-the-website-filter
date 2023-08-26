@@ -27,7 +27,6 @@ const App = () => {
     setLoading(false);
   }
 
-  
   useEffect(() => {
     fetchData();
   }, [])
@@ -46,7 +45,7 @@ const App = () => {
             setCategory={setCategory}
           />
         </div>
-  <div className="w-11/12 max-w-[1200px] 
+        <div className="w-11/12 max-w-[1200px] 
         mx-auto flex flex-wrap justify-center items-center min-h-[50vh]">
         {
             loading ? (<Spinner/>) : (<Cards courses={courses} category={category}/>)
