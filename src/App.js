@@ -6,3 +6,23 @@ import { apiUrl, filterData  } from "./data";
 import { useState,useEffect } from "react";
 import Spinner from "./components/Spinner";
 import {toast} from "react-toastify";
+
+
+const App = () => { 
+  const [courses, setCourses] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [category, setCategory] = useState(filterData[0].title);
+
+  async function fetchData() {
+    setLoading(true);
+    try{
+      let response = await fetch(apiUrl);
+      let output = await response.json();
+      ///output -> 
+      setCourses(output.data);
+    }
+    catch(error) {
+        toast.error("Something Went Wrong!!!");
+    }
+    setLoading(false);
+  }
