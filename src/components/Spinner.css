@@ -8,3 +8,8 @@
     border-radius: 50%;
     animation: spinner-aib1d7 0.75s infinite linear;
  }
+ @keyframes spinner-aib1d7 {
+    to {
+       transform: rotate(360deg);
+    }
+ }
