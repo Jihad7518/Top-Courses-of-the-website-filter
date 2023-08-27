@@ -27,3 +27,20 @@ const Card = (props) => {
             toast.success("Liked Successfully");
         }
     }
+
+    return (
+    <div className='w-[300px] bg-bgDark bg-opacity-80 rounded-md overflow-hidden'>
+        <div className='relative'>
+            <img src={course.image.url}/>
+
+            <div className='w-[40px] h-[40px] bg-white rounded-full absolute right-2 bottom-[-12px]
+            grid place-items-center'>
+                <button onClick={clickHandler}>
+                    {
+                        likedCourses.includes(course.id) ? 
+                        (<FcLike fontSize="1.75rem" />)
+                        :(<FcLikePlaceholder fontSize="1.75rem" />)
+                    }
+                </button>
+            </div>
+        </div>
