@@ -1,3 +1,4 @@
+
 import React from 'react'
 import Card from './Card';
 import { useState } from 'react';
@@ -23,7 +24,8 @@ const Cards = (props) => {
         }
 
     }
-    return (
+
+  return (
     <div className="flex flex-wrap justify-center gap-4 mb-4">
       {
         getCourses().map( (course) => (
@@ -38,5 +40,3 @@ const Cards = (props) => {
 }
 
 export default Cards
-
-
