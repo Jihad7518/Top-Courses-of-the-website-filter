@@ -1,3 +1,4 @@
+
 import React from 'react'
 import {FcLike,FcLikePlaceholder} from "react-icons/fc"
 import { toast } from 'react-toastify';
@@ -27,8 +28,7 @@ const Card = (props) => {
             toast.success("Liked Successfully");
         }
     }
-
-    return (
+  return (
     <div className='w-[300px] bg-bgDark bg-opacity-80 rounded-md overflow-hidden'>
         <div className='relative'>
             <img src={course.image.url}/>
@@ -44,7 +44,9 @@ const Card = (props) => {
                 </button>
             </div>
         </div>
-     <div className='p-4'>
+        
+
+        <div className='p-4'>
             <p className="text-white font-semibold text-lg leading-6">{course.title}</p>
             <p className='mt-2 text-white'>
                     {
