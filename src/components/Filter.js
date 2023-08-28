@@ -8,7 +8,8 @@ const Filter = (props) => {
     function filterHandler(title) {
         setCategory(title);
     }
-    return (
+
+  return (
     <div className="w-11/12 flex flex-wrap max-w-max space-x-4 gap-y-4 mx-auto py-4 justify-center">
       {
         filterData.map( (data) => (
@@ -19,7 +20,7 @@ const Filter = (props) => {
             "bg-opacity-60 border-white" :
             "bg-opacity-40 border-transparent"}
             `}
-key={data.id}
+             key={data.id}
              onClick ={() => filterHandler(data.title)}
              >{data.title}</button>
         ))
