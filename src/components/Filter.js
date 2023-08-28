@@ -19,3 +19,13 @@ const Filter = (props) => {
             "bg-opacity-60 border-white" :
             "bg-opacity-40 border-transparent"}
             `}
+key={data.id}
+             onClick ={() => filterHandler(data.title)}
+             >{data.title}</button>
+        ))
+      }
+    </div>
+  )
+}
+
+export default Filter
